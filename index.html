@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Photo Gallery</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasty-Gallery</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="gallery-container">
-        <h1>Food Photo Gallery</h1>
-        <div class="gallery">
-            <div class="item">
-                <a href="recipe-pages/dish1.html">
-                    <img src="img/Butter Chicken.jpg" alt="Dish 1">
-                </a>
-                <p>Butter Chicken</p>
-            </div>
-            <div class="item">
-                <a href="recipes/Chicken-Biryani.html">
-                    <img src="img/Chicken biryani.jpg" alt="Dish 2">
-                </a>
-                <p>Chicken biryani</p>
-            </div>
-            <div class="item">
-                <a href="recipe-pages/dish3.html">
-                    <img src="images/dish3.jpg" alt="Dish 3">
-                </a>
-                <p>Dish 3</p>
-            </div>
+  <div id="container">
+    <h1>Welcome to Tasty-Gallery</h1>
+    <p>Hover over a dish to preview it and click to view its recipe.</p>
 
-        </div>
+    <!-- Thumbnails Section -->
+    <div class="thumbnails">
+      <img onmouseover="updatePreview('img/Butter Chicken.jpg')" src="img/Butter Chicken-thumb.jpg" alt="Dish 1" onclick="openRecipe('Butter Chicken.html')">
+      <img onmouseover="updatePreview('img/Chicken biryani.jpg')" src="img/Chicken biryani-thumb.jpg" alt="Dish 2" onclick="openRecipe('Chicken biryani.html')">
+      <img onmouseover="updatePreview('img/Chicken Tandoori.jpg')" src="img/Chicken Tandoori-thumb.jpg" alt="Dish 3" onclick="openRecipe('recipe3.html')">
+      <img onmouseover="updatePreview('img/Chicken Tikka Masala.jpg')" src="img/Chicken Tikka Masala-thumb.jpg" alt="Dish 4" onclick="openRecipe('recipe4.html')">
+      <img onmouseover="updatePreview('img/Gulab Jamun.jpg')" src="img/Gulab Jamun-thumb.jpg" alt="Dish 5" onclick="openRecipe('recipe5.html')">
+      <img onmouseover="updatePreview('img/Matar Paneer.jpg')" src="img/Matar Paneer-thumb.jpg" alt="Dish 6" onclick="openRecipe('recipe6.html')">
+      <img onmouseover="updatePreview('img/Mutton biryani.jpg')" src="img/Mutton biryani-thumb.jpg" alt="Dish 7" onclick="openRecipe('recipe7.html')">
+      <img onmouseover="updatePreview('img/Mutton Nihari.jpg')" src="img/Mutton Nihari-thumb.jpg" alt="Dish 8" onclick="openRecipe('recipe8.html')">
+      <img onmouseover="updatePreview('img/Paneer Butter Masala.jpg')" src="img/Paneer Butter Masala-thumb.jpg" alt="Dish 9" onclick="openRecipe('recipe9.html')">
+      <img onmouseover="updatePreview('img/Paneer tikka.jpg')" src="img/Paneer tikka-thumb.jpg" alt="Dish 10" onclick="openRecipe('recipe10.html')">
     </div>
 
-    <script src="script.js"></script>
+    <!-- Preview Section -->
+    <div class="preview">
+      <img id="preview" src="img/Butter Chicken.jpg" alt="Preview Dish">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
